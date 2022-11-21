@@ -1,0 +1,25 @@
+$gap: 30px;
+:root {
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-border-color: #ececec;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --main-btn-active-color: #188ce8;
+  --white-text-color: #ffffff;
+  --active-button-text-color: #ffffff;
+  --whatwedo-overlay-bg-color: rgba(47, 48, 58, 0.8);
+  --card-bg-color: #ffffff;
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
+  --dark-bg-color: #2f303a;
+  --hero-reserv-bg-color: #c4c4c4;
+  --unactive-button-bg-color: #f5f4fa;
+  --footer-address-secondary-color: rgba(255, 255, 255, 0.6);
+  --main-black-color: #000000;
+  --portfolio-card-border-color: #eeeeee;
+  --unactive-svg-color: #afb1b8;
+  --unactive-footer-svg-bg-color: rgba(255, 255, 255, 0.1);
+  --portfolio-overlay-bg-color: rgba(33, 150, 243, 0.9);
+}

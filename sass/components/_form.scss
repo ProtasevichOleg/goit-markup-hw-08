@@ -1,0 +1,15 @@
+.form__fieldset {
+  margin-bottom: 20px;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.form__agreement {
+  margin-bottom: 30px;
+}
+
+.form__button-wrapper {
+  @include flex-centering();
+}

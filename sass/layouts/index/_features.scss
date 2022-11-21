@@ -1,0 +1,22 @@
+.icon-card {
+  @include column-qty(4);
+}
+
+.icon-card__illustration {
+  @include flex-centering();
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.icon-card__title {
+  margin-bottom: 10px;
+  @include font(14px, 16/14, null);
+  text-transform: uppercase;
+}
+
+.icon-card__description {
+  @include font(14px, 24/14, null);
+}

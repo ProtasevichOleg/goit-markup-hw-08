@@ -1,0 +1,30 @@
+@mixin font($size, $height, $weight, $spacing: 0.03em) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+
+@mixin absolute-centering(
+  $position: absolute,
+  $top: 50%,
+  $left: 50%,
+  $trX: -50%,
+  $trY: -50%,
+  $scale: 1
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: translate($trX, $trY) scale($scale);
+}
+
+@mixin flex-centering($display: flex, $align-items: center, $justify-content: center) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin column-qty($count: 1, $gap-local: $gap) {
+  flex-basis: calc((100% - ($gap-local * ($count - 1))) / $count);
+}

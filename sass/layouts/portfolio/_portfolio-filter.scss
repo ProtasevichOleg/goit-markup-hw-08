@@ -1,0 +1,37 @@
+.portfolio__filter {
+  margin-bottom: 50px;
+}
+
+.filter {
+  @include flex-centering();
+  gap: 8px;
+}
+
+.filter__btn {
+  min-width: 73px;
+  padding: 6px 22px;
+  font-family: inherit;
+  @include font(16px, 26/16, 500);
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--main-transition), color var(--main-transition),
+    box-shadow var(--main-transition);
+  background-color: var(--unactive-button-bg-color);
+  color: var(--title-text-color);
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent;
+  $shadow-1: hsla(0, 0%, 0%, 0.1);
+  $shadow-2: hsla(0, 0%, 0%, 0.08);
+  $shadow-3: hsla(0, 0%, 0%, 0.12);
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--active-button-text-color);
+    box-shadow: 0px 3px 1px $shadow-1, 0px 1px 2px $shadow-2, 0px 2px 2px $shadow-3;
+  }
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--active-button-text-color);
+    box-shadow: 0px 3px 1px $shadow-1, 0px 1px 2px $shadow-2, 0px 2px 2px $shadow-3;
+  }
+}

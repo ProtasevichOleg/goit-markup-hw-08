@@ -1,0 +1,36 @@
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials__item {
+  height: 44px;
+  width: 44px;
+}
+
+.socials__link {
+  @include flex-centering();
+  height: 100%;
+  width: 100%;
+  transition: color var(--main-transition), background-color var(--main-transition);
+  border-radius: 50%;
+  background-color: transparent;
+  fill: currentColor;
+
+  &:hover {
+    color: var(--active-button-text-color);
+    background-color: var(--accent-color);
+  }
+  &:focus {
+    color: var(--active-button-text-color);
+    background-color: var(--accent-color);
+  }
+  &--frame-none {
+    color: var(--unactive-svg-color);
+    background-color: transparent;
+  }
+  &--frame-grey {
+    color: var(--white-text-color);
+    background-color: var(--unactive-footer-svg-bg-color);
+  }
+}

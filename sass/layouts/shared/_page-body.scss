@@ -1,0 +1,50 @@
+.page-body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--primary-text-color);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.page-body__main {
+  padding-top: 80px;
+}
+
+.page-body__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.page-body__hero-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.page-body__features-section {
+  padding-bottom: 0;
+}
+
+.page-body__team-section {
+  background-color: var(--secondary-bg-color);
+}
+
+.page-body__backdrop {
+  z-index: 3;
+}
+
+.section__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.title {
+  color: var(--title-text-color);
+}
