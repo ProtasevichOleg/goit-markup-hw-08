@@ -5,46 +5,46 @@
   margin: auto;
   background-color: var(--hero-reserv-bg-color);
   $bg-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-  background-image: $bg-gradient, url(./images/hero/hero-bg-mobile.jpg);
-  background-image: $bg-gradient, url(./images/hero/hero-bg-mobile.webp);
+  background-image: $bg-gradient, url(../images/hero/hero-bg-mobile.jpg);
+  background-image: $bg-gradient, url(../images/hero/hero-bg-mobile.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
 
   @include retina-1_5x {
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@1.5x.jpg);
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@1.5x.webp);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@1.5x.jpg);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@1.5x.webp);
   }
 
   @include retina-2x {
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@2x.jpg);
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@2x.webp);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@2x.jpg);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@2x.webp);
   }
 
   @include retina-3x {
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@3x.jpg);
-    background-image: $bg-gradient, url(./images/hero/hero-bg-mobile@3x.webp);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@3x.jpg);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-mobile@3x.webp);
   }
 
   @include tablet {
     min-width: $tablet-width;
-    background-image: $bg-gradient, url(./images/hero/hero-bg-tablet.jpg);
-    background-image: $bg-gradient, url(./images/hero/hero-bg-tablet.webp);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-tablet.jpg);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-tablet.webp);
 
     @include retina-1_5x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@1.5x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@1.5x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@1.5x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@1.5x.webp);
     }
 
     @include retina-2x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@2x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@2x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@2x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@2x.webp);
     }
 
     @include retina-3x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@3x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-tablet@3x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@3x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-tablet@3x.webp);
     }
   }
 
@@ -52,22 +52,22 @@
     max-width: 1600px;
     padding-top: 200px;
     height: 600px;
-    background-image: $bg-gradient, url(./images/hero/hero-bg-desktop.jpg);
-    background-image: $bg-gradient, url(./images/hero/hero-bg-desktop.webp);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-desktop.jpg);
+    background-image: $bg-gradient, url(../images/hero/hero-bg-desktop.webp);
 
     @include retina-1_5x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@1.5x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@1.5x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@1.5x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@1.5x.webp);
     }
 
     @include retina-2x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@2x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@2x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@2x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@2x.webp);
     }
 
     @include retina-3x {
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@3x.jpg);
-      background-image: $bg-gradient, url(./images/hero/hero-bg-desktop@3x.webp);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@3x.jpg);
+      background-image: $bg-gradient, url(../images/hero/hero-bg-desktop@3x.webp);
     }
   }
 }
