@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="page-body">
+  <body class="page-body" data-body>
     <header class="header page-body__header">
       <div class="container header__container">
         <a class="logo header__logo link" href="./index.html" lang="en"
@@ -906,11 +906,11 @@
       </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__columnset">
         <div class="footer__column">
-          <a class="logo footer-logo link" href="./index.html" lang="en"
-            >Web<span class="logo__accent--color-light">Studio</span></a
+          <a class="logo footer__logo link" href="./index.html" lang="en"
+            >Web<span class="logo__accent logo__accent--color-light">Studio</span></a
           >
           <address>
             <ul class="address list">
@@ -938,12 +938,12 @@
           </address>
         </div>
         <div class="footer__column">
-          <h2 class="footer__title">Приєднуйтесь</h2>
+          <p class="footer__title">Приєднуйтесь</p>
           <ul class="socials list">
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -953,7 +953,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -963,7 +963,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -973,7 +973,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -983,17 +983,10 @@
           </ul>
         </div>
         <div class="footer__column">
-          <h2 class="footer__title">
-            <label for="footer-email-input">Підпишіться на розсилку</label>
-          </h2>
+          <p class="footer__title">Підпишіться на розсилку</p>
           <form class="footer__form">
-            <input
-              type="email"
-              name="email"
-              class="footer__input"
-              id="footer-email-input"
-              placeholder="E-mail"
-            /><button type="submit" class="button button--icon-owner">
+            <input type="email" name="email" class="footer__input" placeholder="E-mail" />
+            <button type="submit" class="button button--icon-owner">
               Підписатися<svg class="button__icon" width="24" height="24">
                 <use href="./images/icon-sprite.svg#icon-footer-send"></use>
               </svg>
@@ -1001,7 +994,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

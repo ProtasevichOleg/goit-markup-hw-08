@@ -64,6 +64,10 @@
   border: solid;
   border-width: 0 1px 1px 1px;
   border-color: var(--portfolio-card-border-color);
+
+  @include tablet {
+    height: calc(100% - 294px);
+  }
 }
 
 .product-card__title {

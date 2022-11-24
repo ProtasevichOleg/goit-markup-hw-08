@@ -71,4 +71,17 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  color: initial;
+  fill: currentColor;
+  transition: color var(--main-transition);
+
+  :focus {
+    color: var(--accent-color);
+  }
+  :hover {
+    color: var(--accent-color);
+  }
+}
+
+.modal__close-icon {
 }
