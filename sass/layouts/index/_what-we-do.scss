@@ -1,5 +1,5 @@
 .illustration-card {
-  flex-basis: calc((100% - 60px) / 3);
+  @include column-qty(3);
 }
 
 .illustration-card__thumb {
@@ -18,7 +18,7 @@
 }
 
 .illustration-card__title {
-  @include font(14px, 16/14, null);
+  @include font(14px, 16px, null);
   text-transform: uppercase;
   color: var(--white-text-color);
 }

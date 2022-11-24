@@ -1,0 +1,9 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-no-scroll {
+  @include before-tablet {
+    overflow: hidden;
+  }
+}

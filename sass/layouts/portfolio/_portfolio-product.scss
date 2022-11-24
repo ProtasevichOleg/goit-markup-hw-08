@@ -1,6 +1,14 @@
 .product-card {
-  flex-basis: calc((100% - 60px) / 3);
+  @include column-qty(1);
   background: var(--card-bg-color);
+
+  @include tablet {
+    @include column-qty(2);
+  }
+
+  @include desktop {
+    @include column-qty(3);
+  }
 }
 
 .product-card__link {
@@ -47,7 +55,7 @@
 }
 
 .product-card__story {
-  @include font(18px, 28/18, null);
+  @include font(18px, 28px, null);
   color: var(--white-text-color);
 }
 
@@ -60,9 +68,9 @@
 
 .product-card__title {
   margin-bottom: 4px;
-  @include font(18px, 36/18, null, 0.06em);
+  @include font(18px, 36px, null, 0.06em);
 }
 
 .product-card__description {
-  @include font(16px, 30/16, null);
+  @include font(16px, 30px, null);
 }

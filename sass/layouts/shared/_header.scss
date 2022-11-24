@@ -6,55 +6,135 @@
 }
 
 .header__container {
-  @include flex-centering();
+  position: relative;
+  @include tablet {
+    display: flex;
+  }
 }
 
-.navigation {
-  @include flex-centering();
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
-.navigation__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+.header__menu-switcher {
+  z-index: 5;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
-.navigation__menu {
-  margin-left: 93px;
+.menu-switcher {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  fill: currentColor;
+  cursor: pointer;
+  transition: color var(--main-transition);
+  &:hover {
+    color: var(--accent-color);
+  }
+  &:focus {
+    color: var(--accent-color);
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-switcher__icon {
+  &--close {
+    display: none;
+    .header__menu-button.is-open & {
+      display: block;
+    }
+  }
+  &--open {
+    .header__menu-button.is-open & {
+      display: none;
+    }
+  }
+}
+
+.header__menu {
+  z-index: 4;
 }
 
 .menu {
-  @include flex-centering();
-}
-
-.menu__item {
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  &:not(:last-child) {
-    margin-right: 50px;
+  display: none;
+  &.is-open {
+    display: flex;
+  }
+  flex-basis: 100%;
+  justify-content: space-between;
+  gap: 90px;
+  @media screen and (max-width: 436px) {
+    width: 100vw;
+    padding-left: 307px;
+  }
+  @include before-tablet {
+    overflow-y: scroll;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    position: absolute;
+    top: 0;
+    left: -287px;
+    width: 200vw;
+    height: 100vh;
+    min-height: 100px;
+    padding-top: 48px;
+    padding-right: 40px;
+    padding-bottom: 48px;
+  }
+  @media screen and (min-width: 437px) and (max-width: 767px) {
+    padding-left: 327px;
+  }
+  @include tablet {
+    display: flex;
+    align-items: center;
   }
 }
 
-.menu__link {
+.navigation__list {
+  @include tablet {
+    @include flex-centering();
+    gap: 50px;
+  }
+}
+
+.navigation__item {
+  position: relative;
+  @include font(40px, 47px, 500, 0.02em);
+  color: var(--title-text-color);
+
+  @include before-tablet {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @include tablet {
+    @include font(14px, 16px, null, null);
+  }
+}
+
+.navigation__link {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   transition: color var(--main-transition);
   &--active {
     color: var(--accent-color);
-  }
-  &--active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--accent-color);
-    border-radius: 2px;
   }
   &:hover {
     color: var(--accent-color);
@@ -62,32 +142,69 @@
   &:focus {
     color: var(--accent-color);
   }
-}
 
-.header__connect {
-  margin-left: auto;
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &--active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+  }
 }
 
 .connect {
-  display: flex;
   fill: currentColor;
+
+  @media screen and (max-width: 436px) {
+    // text-align: center;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  @include desktop {
+    flex-direction: row-reverse;
+    gap: 30px;
+  }
 }
 
 .connect__item {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include font(24px, 28px, 500, 00.02em);
+
+  @media screen and (max-width: 436px) {
+    font-size: 5.5vw;
+  }
+
+  &:first-child {
+    @include before-tablet {
+      margin-bottom: 32px;
+      color: var(--accent-color);
+      @include font(34px, 40px, null, null);
+      @media screen and (max-width: 436px) {
+        font-size: 7.8vw;
+      }
+    }
+  }
+  @include tablet {
+    @include font(12px, 14px, null, null);
+  }
+  @include desktop {
+    @include font(14px, 16px, null, null);
   }
 }
 
 .connect__link {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   transition: color var(--main-transition);
   &:hover {
     color: var(--accent-color);
@@ -95,9 +212,33 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .connect__icon {
+  display: none;
   vertical-align: text-bottom;
   margin-right: 10px;
+
+  @include tablet {
+    display: unset;
+  }
+}
+
+.menu__socials {
+  margin-top: 64px;
+  justify-content: flex-start;
+  color: var(--accent-color);
+
+  @include tablet {
+    display: none;
+  }
+
+  @media screen and (max-width: 436px) {
+    font-size: 4.1vw;
+  }
 }

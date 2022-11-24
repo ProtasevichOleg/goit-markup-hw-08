@@ -4,14 +4,20 @@
 
 .filter {
   @include flex-centering();
+  flex-wrap: wrap;
   gap: 8px;
+
+  @media screen and (max-width: calc($tablet-width - 1px)) {
+    justify-content: start;
+    max-width: 350px;
+  }
 }
 
 .filter__btn {
   min-width: 73px;
   padding: 6px 22px;
   font-family: inherit;
-  @include font(16px, 26/16, 500);
+  @include font(16px, 26px, 500);
   border: transparent;
   border-radius: 4px;
   cursor: pointer;

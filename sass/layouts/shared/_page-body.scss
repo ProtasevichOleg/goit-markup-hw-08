@@ -10,7 +10,10 @@
 }
 
 .page-body__main {
-  padding-top: 80px;
+  padding-top: 60px;
+  @include tablet {
+    padding-top: 80px;
+  }
 }
 
 .page-body__header {
@@ -26,7 +29,14 @@
 }
 
 .page-body__features-section {
-  padding-bottom: 0;
+}
+
+.page-body__what-we-do-section {
+  padding-top: 0;
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }
 
 .page-body__team-section {
@@ -39,10 +49,12 @@
 
 .section__title {
   margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
+  @include font(28px, 33px, null);
   text-align: center;
-  letter-spacing: 0.03em;
+
+  @include desktop {
+    @include font(36px, 42px, null);
+  }
 }
 
 .title {

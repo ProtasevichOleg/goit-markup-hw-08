@@ -1,6 +1,14 @@
 .logo-card {
-  @include column-qty(6);
+  @include column-qty(2);
   height: 92px;
+
+  @include tablet {
+    @include column-qty(3);
+  }
+
+  @include desktop {
+    @include column-qty(6);
+  }
 }
 .logo-card__link {
   @include flex-centering();

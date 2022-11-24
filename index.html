@@ -13,46 +13,110 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="page-body">
-    <!-- <header class="header page-body__header">
+  <body class="page-body" data-body>
+    <header class="header page-body__header">
       <div class="container header__container">
-        <nav class="navigation">
-          <a class="logo navigation__logo link" href="./index.html" lang="en"
-            >Web<span class="logo__accent logo__accent--color-dark">Studio</span></a
-          >
-          <ul class="menu navigation__menu list">
-            <li class="menu__item">
-              <a class="menu__link menu__link--active link" href="./index.html">Студія</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="menu__item"><a class="menu__link link" href="">Контакти </a></li>
-          </ul>
-        </nav>
-        <ul class="connect header__connect list">
-          <li class="connect__item">
-            <a class="connect__link link" href="mailto:info@devstudio.com">
-              <svg class="connect__icon" width="16" height="16">
-                <use href="./images/icon-sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="connect__item">
-            <a class="connect__link link" href="tel:+380961111111">
-              <svg class="connect__icon" width="10" height="16">
-                <use href="./images/icon-sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <a class="logo header__logo link" href="./index.html" lang="en"
+          >Web<span class="logo__accent logo__accent--color-dark">Studio</span></a
+        >
+        <button
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="menu-container"
+          class="menu-switcher header__menu-switcher outline-remover"
+        >
+          <svg aria-label="Перемикач мобільного меню" width="40" height="40">
+            <use
+              class="menu-switcher__icon menu-switcher__icon--open"
+              href="./images/icon-sprite.svg#icon-menu-open"
+            ></use>
+            <use
+              class="menu-switcher__icon menu-switcher__icon--close"
+              href="./images/icon-sprite.svg#icon-menu-close"
+            ></use>
+          </svg>
+        </button>
+        <div data-menu id="menu-container" class="menu header__menu">
+          <nav class="navigation menu__navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active link" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link link" href="">Контакти </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__contacts-wrapper">
+            <ul class="connect menu__connect list">
+              <li class="connect__item">
+                <a class="connect__link link" href="tel:+380961111111">
+                  <svg class="connect__icon" width="10" height="16">
+                    <use href="./images/icon-sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="connect__item">
+                <a class="connect__link link" href="mailto:info@devstudio.com">
+                  <svg class="connect__icon" width="16" height="16">
+                    <use href="./images/icon-sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="socials menu__socials list">
+              <li class="socials__item socials__item--no-icon">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="socials__link socials__link--no-icon link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="socials__item socials__item--no-icon">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="socials__link socials__link--no-icon link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="socials__item socials__item--no-icon">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="socials__link socials__link--no-icon link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="socials__item socials__item--no-icon">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="socials__link socials__link--no-icon link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <main class="page-body__main">
-      <!-- Ефективні рішення для вашого бізнесу -->
+      <!-- HERO -->
 
       <section class="section page-body__hero-section">
         <div class="hero">
@@ -67,7 +131,7 @@
 
       <!-- Наші особливості -->
 
-      <!-- <section class="section page-body__features-section">
+      <section class="section page-body__features-section">
         <div class="container">
           <h2 class="visually-hidden">Наші особливості</h2>
           <ul class="cardset icon-cardset list">
@@ -117,23 +181,41 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Чим ми займаємося -->
 
-      <!-- <section class="section">
+      <section class="section page-body__what-we-do-section">
         <div class="container">
           <h2 class="section__title title">Чим ми займаємося</h2>
           <ul class="cardset illustration-cardset list">
             <li class="illustration-card">
               <div class="illustration-card__thumb">
-                <img
-                  class="image"
-                  src="./images/main-whatwedo-img-1.jpg"
-                  alt="людина пише код"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-1-desktop.webp      1x,
+                      ./images/whatwedo/whatwedo-img-1-desktop@1.5x.webp 1.5x,
+                      ./images/whatwedo/whatwedo-img-1-desktop@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-1-desktop.jpg      1x,
+                      ./images/whatwedo/whatwedo-img-1-desktop@1.5x.jpg 1.5x,
+                      ./images/whatwedo/whatwedo-img-1-desktop@2x.jpg   2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    src="./images/whatwedo/whatwedo-img-1-desktop.jpg"
+                    alt="людина перевіряє дизайн мобільного застосунку"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="illustration-card__overlay">
                   <h3 class="illustration-card__title">Десктопні додатки</h3>
                 </div>
@@ -141,13 +223,31 @@
             </li>
             <li class="illustration-card">
               <div class="illustration-card__thumb">
-                <img
-                  class="image"
-                  src="./images/main-whatwedo-img-2.jpg"
-                  alt="людина перевіряю дизайн мобільного застосунку"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-2-desktop.webp      1x,
+                      ./images/whatwedo/whatwedo-img-2-desktop@1.5x.webp 1.5x,
+                      ./images/whatwedo/whatwedo-img-2-desktop@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-2-desktop.jpg      1x,
+                      ./images/whatwedo/whatwedo-img-2-desktop@1.5x.jpg 1.5x,
+                      ./images/whatwedo/whatwedo-img-2-desktop@2x.jpg   2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    src="./images/whatwedo/whatwedo-img-2-desktop.jpg"
+                    alt="людина перевіряє дизайн мобільного застосунку"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="illustration-card__overlay">
                   <h3 class="illustration-card__title">Мобільні додатки</h3>
                 </div>
@@ -155,13 +255,31 @@
             </li>
             <li class="illustration-card">
               <div class="illustration-card__thumb">
-                <img
-                  class="image"
-                  src="./images/main-whatwedo-img-3.jpg"
-                  alt="дизайнер обирає колір"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-3-desktop.webp      1x,
+                      ./images/whatwedo/whatwedo-img-3-desktop@1.5x.webp 1.5x,
+                      ./images/whatwedo/whatwedo-img-3-desktop@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/whatwedo/whatwedo-img-3-desktop.jpg      1x,
+                      ./images/whatwedo/whatwedo-img-3-desktop@1.5x.jpg 1.5x,
+                      ./images/whatwedo/whatwedo-img-3-desktop@2x.jpg   2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    src="./images/whatwedo/whatwedo-img-3-desktop.jpg"
+                    alt="людина перевіряє дизайн мобільного застосунку"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="illustration-card__overlay">
                   <h3 class="illustration-card__title">Дизайнерські рішення</h3>
                 </div>
@@ -169,21 +287,82 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Наша команда -->
 
-      <!-- <section class="section section__team">
+      <section class="section page-body__team-section">
         <div class="container">
           <h2 class="section__title title">Наша команда</h2>
           <ul class="cardset people-cardset list">
             <li class="people-card">
-              <img
-                src="./images/main-ourteam-img-1.jpg"
-                alt="фотокартка Ігоря Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-desktop.webp      1x,
+                    ./images/ourteam/ourteam-img-1-desktop@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-1-desktop@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-1-desktop@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-desktop.jpg      1x,
+                    ./images/ourteam/ourteam-img-1-desktop@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-1-desktop@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-1-desktop@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-tablet.webp      1x,
+                    ./images/ourteam/ourteam-img-1-tablet@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-1-tablet@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-1-tablet@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-tablet.jpg      1x,
+                    ./images/ourteam/ourteam-img-1-tablet@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-1-tablet@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-1-tablet@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-mobile.webp      1x,
+                    ./images/ourteam/ourteam-img-1-mobile@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-1-mobile@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-1-mobile@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-1-mobile.jpg      1x,
+                    ./images/ourteam/ourteam-img-1-mobile@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-1-mobile@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-1-mobile@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/ourteam/ourteam-img-1-mobile.jpg"
+                  alt="фотокартка Ігоря Дем'яненко"
+                  width="450"
+                />
+              </picture>
               <div class="people-card__text">
                 <h3 class="people-card__title title">Ігор Дем'яненко</h3>
                 <p class="people-card__description" lang="en">Product Designer</p>
@@ -191,7 +370,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -201,7 +380,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -211,7 +390,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -221,7 +400,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -232,12 +411,74 @@
               </div>
             </li>
             <li class="people-card">
-              <img
-                src="./images/main-ourteam-img-2.jpg"
-                alt="фотокартка Ольги Рєпіної"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-desktop.webp      1x,
+                    ./images/ourteam/ourteam-img-2-desktop@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-2-desktop@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-2-desktop@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-desktop.jpg      1x,
+                    ./images/ourteam/ourteam-img-2-desktop@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-2-desktop@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-2-desktop@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-tablet.webp      1x,
+                    ./images/ourteam/ourteam-img-2-tablet@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-2-tablet@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-2-tablet@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-tablet.jpg      1x,
+                    ./images/ourteam/ourteam-img-2-tablet@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-2-tablet@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-2-tablet@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-mobile.webp      1x,
+                    ./images/ourteam/ourteam-img-2-mobile@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-2-mobile@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-2-mobile@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-2-mobile.jpg      1x,
+                    ./images/ourteam/ourteam-img-2-mobile@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-2-mobile@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-2-mobile@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/ourteam/ourteam-img-2-mobile.jpg"
+                  alt="фотокартка Ольги Рєпіної"
+                  width="450"
+                />
+              </picture>
+
               <div class="people-card__text">
                 <h3 class="people-card__title title">Ольга Рєпіна</h3>
                 <p class="people-card__description" lang="en">Frontend Developer</p>
@@ -245,7 +486,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -255,7 +496,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -265,7 +506,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -275,7 +516,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -286,12 +527,73 @@
               </div>
             </li>
             <li class="people-card">
-              <img
-                src="./images/main-ourteam-img-3.jpg"
-                alt="фотокартка Миколи Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-desktop.webp      1x,
+                    ./images/ourteam/ourteam-img-3-desktop@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-3-desktop@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-3-desktop@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-desktop.jpg      1x,
+                    ./images/ourteam/ourteam-img-3-desktop@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-3-desktop@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-3-desktop@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-tablet.webp      1x,
+                    ./images/ourteam/ourteam-img-3-tablet@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-3-tablet@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-3-tablet@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-tablet.jpg      1x,
+                    ./images/ourteam/ourteam-img-3-tablet@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-3-tablet@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-3-tablet@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-mobile.webp      1x,
+                    ./images/ourteam/ourteam-img-3-mobile@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-3-mobile@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-3-mobile@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-3-mobile.jpg      1x,
+                    ./images/ourteam/ourteam-img-3-mobile@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-3-mobile@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-3-mobile@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/ourteam/ourteam-img-3-mobile.jpg"
+                  alt="фотокартка Миколи Тарасова"
+                  width="450"
+                />
+              </picture>
               <div class="people-card__text">
                 <h3 class="people-card__title title">Микола Тарасов</h3>
                 <p class="people-card__description" lang="en">Marketing</p>
@@ -299,7 +601,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -309,7 +611,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -319,7 +621,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -329,7 +631,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -340,12 +642,73 @@
               </div>
             </li>
             <li class="people-card">
-              <img
-                src="./images/main-ourteam-img-4.jpg"
-                alt="фотокартка Михайла Єрмакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-desktop.webp      1x,
+                    ./images/ourteam/ourteam-img-4-desktop@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-4-desktop@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-4-desktop@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-desktop.jpg      1x,
+                    ./images/ourteam/ourteam-img-4-desktop@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-4-desktop@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-4-desktop@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-tablet.webp      1x,
+                    ./images/ourteam/ourteam-img-4-tablet@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-4-tablet@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-4-tablet@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-tablet.jpg      1x,
+                    ./images/ourteam/ourteam-img-4-tablet@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-4-tablet@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-4-tablet@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-mobile.webp      1x,
+                    ./images/ourteam/ourteam-img-4-mobile@1.5x.webp 1.5x,
+                    ./images/ourteam/ourteam-img-4-mobile@2x.webp   2x,
+                    ./images/ourteam/ourteam-img-4-mobile@3x.webp   3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ourteam/ourteam-img-4-mobile.jpg      1x,
+                    ./images/ourteam/ourteam-img-4-mobile@1.5x.jpg 1.5x,
+                    ./images/ourteam/ourteam-img-4-mobile@2x.jpg   2x,
+                    ./images/ourteam/ourteam-img-4-mobile@3x.jpg   3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/ourteam/ourteam-img-4-mobile.jpg"
+                  alt="фотокартка Михайла Єрмакова"
+                  width="450"
+                />
+              </picture>
               <div class="people-card__text">
                 <h3 class="people-card__title title">Михайло Єрмаков</h3>
                 <p class="people-card__description" lang="en">
@@ -355,7 +718,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -365,7 +728,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -375,7 +738,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -385,7 +748,7 @@
                   <li class="socials__item">
                     <a
                       href=""
-                      class="socials__link socials__link--frame-none link outline-remover"
+                      class="socials__link socials__link--icon-owner socials__link--frame-none link outline-remover"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       ><svg class="member-soc-icon soc-icon" width="20" height="20">
@@ -397,11 +760,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Постійні клієнти -->
 
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section__title title">Постійні Клієнти</h2>
           <ul class="cardset logo-cardset list">
@@ -479,13 +842,13 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__columnset">
         <div class="footer__column">
-          <a class="logo footer-logo link" href="./index.html" lang="en"
+          <a class="logo footer__logo link" href="./index.html" lang="en"
             >Web<span class="logo__accent logo__accent--color-light">Studio</span></a
           >
           <address>
@@ -519,7 +882,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -529,7 +892,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -539,7 +902,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -549,7 +912,7 @@
             <li class="socials__item">
               <a
                 href=""
-                class="socials__link socials__link--frame-grey link outline-remover"
+                class="socials__link socials__link--icon-owner socials__link--frame-grey link outline-remover"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 ><svg class="footer-soc-icon soc-icon" width="20" height="20">
@@ -570,7 +933,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- MODAL -->
 
@@ -663,5 +1026,6 @@
 
     <!-- Script -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
