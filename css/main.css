@@ -442,6 +442,7 @@ abbr[title] {
 }
 
 .form-item__wrap {
+  display: block;
   position: relative;
 }
 
