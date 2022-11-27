@@ -37,34 +37,35 @@
     @include desktop {
       width: 231px;
       margin-right: 70px;
+      margin-bottom: unset;
     }
   }
   &:nth-child(2) {
     margin-bottom: 60px;
-    @include tablet {
-    }
     @include desktop {
       margin-right: 93px;
+      margin-bottom: unset;
     }
   }
   &:nth-child(3) {
   }
 }
 
-.address {
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    @include desktop {
+      margin-bottom: 9px;
+    }
+  }
 }
 
-.address__item {
+.address__link {
   transition: color var(--main-transition);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(14px, 24px, null);
   color: var(--footer-address-secondary-color);
 
-  &:not(:last-child) {
-    margin-bottom: 9px;
-  }
   &--color-white {
     color: var(--white-text-color);
   }
@@ -89,7 +90,7 @@
   flex-wrap: wrap;
   gap: 20px;
   max-width: 570px;
-  height: 50px;
+  // height: 50px;
   @include desktop {
     gap: 12px;
   }

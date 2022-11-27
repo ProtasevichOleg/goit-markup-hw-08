@@ -174,10 +174,6 @@
 .connect {
   fill: currentColor;
 
-  @media screen and (max-width: 436px) {
-    // text-align: center;
-  }
-
   @include tablet {
     display: flex;
     flex-direction: column-reverse;
@@ -238,6 +234,18 @@
 
   @include tablet {
     display: unset;
+  }
+  &--shown-smartphone {
+    @include before-desktop {
+      width: 10px;
+      height: 14px;
+    }
+  }
+  &--shown-envelope {
+    @include before-desktop {
+      width: 14px;
+      height: 10px;
+    }
   }
 }
 

@@ -47,6 +47,12 @@
   }
 }
 
+@mixin before-desktop {
+  @media screen and (max-width: calc($desktop-width - 1px)) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: $desktop-width) {
     @content;

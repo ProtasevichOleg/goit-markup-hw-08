@@ -5,8 +5,12 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .page-body__main {
@@ -48,11 +52,12 @@
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @include font(28px, 33px, null);
   text-align: center;
 
   @include desktop {
+    margin-bottom: 50px;
     @include font(36px, 42px, null);
   }
 }

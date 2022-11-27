@@ -1,7 +1,7 @@
 .hero {
   padding-top: 118px;
+  padding-bottom: 118px;
   max-width: $mobile-width;
-  height: 400px;
   margin: auto;
   background-color: var(--hero-reserv-bg-color);
   $bg-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
@@ -51,7 +51,8 @@
   @include desktop {
     max-width: 1600px;
     padding-top: 200px;
-    height: 600px;
+    padding-bottom: 200px;
+    // height: 600px;
     background-image: $bg-gradient, url(../images/hero/hero-bg-desktop.jpg);
     background-image: $bg-gradient, url(../images/hero/hero-bg-desktop.webp);
 
